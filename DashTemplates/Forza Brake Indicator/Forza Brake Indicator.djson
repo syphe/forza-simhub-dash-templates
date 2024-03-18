@@ -13,7 +13,7 @@
         }
     },
     "Version": 2,
-    "Id": "e5db2174-1f8e-4b4a-af12-fda9f0774751",
+    "Id": "29e526f6-5356-425f-8122-4a6e2a2fc005",
     "BaseHeight": 150,
     "BaseWidth": 150,
     "BackgroundColor": "#FF000000",
@@ -154,13 +154,22 @@
                     "Left": 10.0,
                     "Top": 10.0,
                     "Visible": true,
-                    "BlinkDelay": 50.0,
+                    "BlinkDelay": 100.0,
+                    "BlinkEnabled": true,
                     "Width": 100.0,
                     "Name": "GroupItem",
                     "RenderingSkip": 0,
                     "MinimumRefreshIntervalMS": 0.0,
                     "Bindings": {
                         "Visible": {
+                            "Formula": {
+                                "JSExt": 0,
+                                "Interpreter": 1,
+                                "Expression": "return NewRawData()?.NormalizedAIBrakeDifference > 0"
+                            },
+                            "Mode": 2
+                        },
+                        "BlinkEnabled": {
                             "Formula": {
                                 "JSExt": 0,
                                 "Interpreter": 1,
